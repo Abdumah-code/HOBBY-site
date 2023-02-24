@@ -14,18 +14,16 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.body{
+body{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .changeEverything{
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: yellow;
   color: black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
