@@ -1,5 +1,4 @@
-@import url(./desktop.css);
-@media (min-width: 280px) and (max-width: 766px) {
+@media (min-width: 1024px) {
   :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -99,16 +98,4 @@
     height: 100%;
     width: 100%;
   }
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=desktop.css.map */
