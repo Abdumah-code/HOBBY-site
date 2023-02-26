@@ -1,23 +1,30 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const styleBtn: HTMLElement = document.getElementById("styleChangeBtn")!;
+const bodyElement: any = document.getElementsByTagName("body")[0];
+const headerElement: any = document.getElementById("header");
+const footerElement: any = document.getElementById("footer");
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+let isStyleSet1: boolean = true;
+const bodyStyle = bodyElement.style;
+
+styleBtn.addEventListener("click", toggleStyle);
+
+function toggleStyle(): void {
+  if (isStyleSet1) {
+    bodyStyle.backgroundImage = "url('./src/images/manga-bg.jpg')";
+    bodyStyle.color = "black";
+    headerElement.textContent = "This is what manag looks like";
+    footerElement.textContent = "";
+    styleBtn.textContent = "Switch";
+    isStyleSet1 = false;
+  } else {
+    bodyStyle.backgroundImage = "url('./src/images/anime-bg.jpg')";
+    bodyStyle.color = "white";
+    footerElement.textContent = "This is what anime looks like";
+    headerElement.textContent = "";
+    styleBtn.textContent = "Switch";
+    isStyleSet1 = true;
+  }
+}
+
